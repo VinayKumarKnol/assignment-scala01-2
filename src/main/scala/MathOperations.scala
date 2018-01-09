@@ -1,11 +1,11 @@
 class MathOperations {
-   def findProductAndSum(number: Int): Unit = {
+  def findProductAndSum(number: Int): Unit = {
     val product: Long = factorial(number)
     println(s"The product from 1 to $number : $product")
     println(s"The sum of digits of $product : ${findSumOfDigits(product)}")
   }
 
-   def factorial(number: Int): Long = {
+  def factorial(number: Int): Long = {
     def fact(n: Int): Long = {
       if (n == 1) {
         n
@@ -19,7 +19,7 @@ class MathOperations {
 
   }
 
-   def findSumOfDigits(number: Long): Long = {
+  def findSumOfDigits(number: Long): Long = {
     def findSum(num: Long): Long = {
       if (num == 0) {
         0
@@ -32,13 +32,13 @@ class MathOperations {
     findSum(number)
   }
 
-   def displayListWithIndex(numbers: List[Int]): Unit = {
+  def displayListWithIndex(numbers: List[Int]): Unit = {
     numbers.foreach {
       number => println(s"${numbers.indexOf(number)} = $number")
     }
   }
 
-   def findMaxFromList(myList: List[Int]): Int = {
+  def findMaxFromList(myList: List[Int]): Int = {
     if (myList.nonEmpty) {
       myList.max
     }
@@ -47,7 +47,7 @@ class MathOperations {
     }
   }
 
-   def findFibonacciAt(index: Int): Int = {
+  def findFibonacciAt(index: Int): Int = {
     def fibonacciTerm(term: Int): Int = {
       if (term <= 1) {
         term
