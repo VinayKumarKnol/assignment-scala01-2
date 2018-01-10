@@ -39,13 +39,18 @@ class MathOperations {
   }
 
   def findMaxFromList(myList: List[Int]): Int = {
-    if (myList.nonEmpty) {
-      myList.max
-    }
-    else {
-      -1 //indicates failure
-    }
+      def findMax(size: Int): Int ={
+        if(size == 1)
+        {
+          myList(size-1)
+        }
+        else{
+          math.min(myList(size-1), findMax(size-1))
+        }
+      }
+      findMax(myList.length-1)
   }
+
 
   def findFibonacciAt(index: Int): Int = {
     def fibonacciTerm(term: Int): Int = {
